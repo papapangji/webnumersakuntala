@@ -5,7 +5,7 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Newton from './test/Newton';
 import Lagrange from './test/Lagrange';
 import Bisection from './test/Bisection';
-
+sfvsafvv
 
 function App() {
   return (
