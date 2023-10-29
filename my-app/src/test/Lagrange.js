@@ -1,6 +1,7 @@
 import {React,Component} from "react";
 import { Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
+import './Bisection.css';
 
 const mainDiv = {
     display:"flex",
@@ -17,7 +18,7 @@ class Lagrange extends Component{
     constructor(){
         super();
         let i = 0;
-        // document.getElementById("arr_x").innerHTML=i;
+        
     }
 
     Cal_Linear_interpolate(){
@@ -26,8 +27,8 @@ class Lagrange extends Component{
         var xvalue = 42235;
         var Linear_L = [];
         var Linear_ans;
-        var start = document.getElementById("Linear_Inputp1").value;
-        var end = document.getElementById("Linear_Inputp2").value;
+        var start = document.getElementById("Linearinputp1").value;
+        var end = document.getElementById("Linearinputp2").value;
         var p1 = Number(start);
         var p2 = Number(end);
 
@@ -48,9 +49,9 @@ class Lagrange extends Component{
         var xvalue = 42235;
         var Quadratic_L = [];
         var Quadratic_ans;
-        var x1 = document.getElementById("Quadtic_Inputp1").value;
-        var x2 = document.getElementById("Quadtic_Inputp2").value;
-        var x3 = document.getElementById("Quadtic_Inputp3").value;
+        var x1 = document.getElementById("Quadticinputp1").value;
+        var x2 = document.getElementById("Quadticinputp2").value;
+        var x3 = document.getElementById("Quadticinputp3").value;
         var p1 = Number(x1);
         var p2 = Number(x2);
         var p3 = Number(x3);
@@ -73,8 +74,8 @@ class Lagrange extends Component{
         var xvalue = 42235;
         var Polynomial_L = [];
         var Polynomial_ans = 0;
-        var start = document.getElementById("Polynomial_Inputstart").value;
-        var end = document.getElementById("Polynomial_Inputend").value;
+        var start = document.getElementById("Polynomialinputstart").value;
+        var end = document.getElementById("Polynomialinputend").value;
         var s = Number(start);
         var e = Number(end);
 
@@ -107,71 +108,73 @@ class Lagrange extends Component{
             <div>
                 <div style={mainDiv}>
                     <div style={Div}>
+                    <div class="head1" style={{width:"30%",margin:"0 auto"}}>
                         <h1>Lagrange Interpolation</h1>
+                        </div>
                         <br/>
 
-                        <div>
+                        <div className="box">
                             
-                            <h>x = </h>
-                            <h style={{color:'green'}} id="arr_x">  </h>
+                            
+                            <h style={{color:'back'}} id="arrx">  </h>
                         </div>
 
                         <br/>
 
-                        <div>
-                            <Form.Control id="Linear_Inputp1" type="number" placeholder="input x1" style={{width:"20%", margin:"0 auto"}}></Form.Control>
+                        <div className="box">
+                            <Form.Control id="Linearinputp1" type="number" placeholder="x1" style={{width:"30%", margin:"0 auto"}}></Form.Control>
                             <br/>
-                            <Form.Control id="Linear_Inputp2" type="number" placeholder="input x2" style={{width:"20%", margin:"0 auto"}}></Form.Control>
+                            <Form.Control id="Linearinputp2" type="number" placeholder="x2" style={{width:"30%", margin:"0 auto"}}></Form.Control>
                             <br/><br/>
                         </div>
-                        <div>
-                            <Button onClick={this.Cal_Linear_interpolate} style={{width:"7%", margin:"0 auto"}}>
-                                Calculate
+                        <div className="box">
+                            <Button onClick={this.Cal_Linear_interpolate} style={{width:"15%", margin:"0 auto"}}>
+                                done
                             </Button>
                             <br/><br/>
 
                             <h>Linear = </h>
-                            <h style={{color:'pink'}} id="Linear">  </h>
+                            <h style={{color:'back'}} id="Linear">  </h>
                         </div>
 
                        
 
                         <br/><br/>
 
-                        <div>
-                            <Form.Control id="Quadtic_Inputp1" type="number" placeholder="input x1" style={{width:"20%", margin:"0 auto"}}></Form.Control>
+                        <div className="box">
+                            <Form.Control id="Quadticinputp1" type="number" placeholder="x1" style={{width:"30%", margin:"0 auto"}}></Form.Control>
                             <br/>
-                            <Form.Control id="Quadtic_Inputp2" type="number" placeholder="input x2" style={{width:"20%", margin:"0 auto"}}></Form.Control>
+                            <Form.Control id="Quadticinputp2" type="number" placeholder="x2" style={{width:"30%", margin:"0 auto"}}></Form.Control>
                             <br/>
-                            <Form.Control id="Quadtic_Inputp3" type="number" placeholder="input x3" style={{width:"20%", margin:"0 auto"}}></Form.Control>
+                            <Form.Control id="Quadticinputp3" type="number" placeholder="x3" style={{width:"30%", margin:"0 auto"}}></Form.Control>
                             <br/><br/>
                         </div>
-                        <div>
-                            <Button onClick={this.Cal_Quadtic_interpolate} style={{width:"7%", margin:"0 auto"}}>
-                                Calculate
+                        <div className="box">
+                            <Button onClick={this.Cal_Quadtic_interpolate} style={{width:"15%", margin:"0 auto"}}>
+                                done
                             </Button>
                             <br/><br/>
 
                             <h>Quadratic = </h>
-                            <h style={{color:'green'}} id="Quadratic">  </h>
+                            <h style={{color:'back'}} id="Quadratic">  </h>
                         </div>
                         
                         <br/><br/>
 
-                        <div>
-                            <Form.Control id="Polynomial_Inputstart" type="number" placeholder="input start" style={{width:"20%", margin:"0 auto"}}></Form.Control>
+                        <div className="box">
+                            <Form.Control id="Polynomialinputstart" type="number" placeholder="xstart" style={{width:"30%", margin:"0 auto"}}></Form.Control>
                             <br/>
-                            <Form.Control id="Polynomial_Inputend" type="number" placeholder="input end" style={{width:"20%", margin:"0 auto"}}></Form.Control>
+                            <Form.Control id="Polynomialinputend" type="number" placeholder="xend" style={{width:"30%", margin:"0 auto"}}></Form.Control>
                             <br/><br/>
                         </div>
-                        <div>
-                            <Button onClick={this.Cal_Polynomial_interpolate} style={{width:"7%", margin:"0 auto"}}>
-                                Calculate
+                        <div className="box">
+                            <Button onClick={this.Cal_Polynomial_interpolate} style={{width:"15%", margin:"0 auto"}}>
+                                done
                             </Button>
                             <br/><br/>
 
-                            <h>Quadratic = </h>
-                            <h style={{color:'pink'}} id="Polynomial">  </h>
+                            <h>Polynomial = </h>
+                            <h style={{color:'back'}} id="Polynomial">  </h>
                         </div>
 
                         <br/><br/>

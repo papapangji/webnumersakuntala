@@ -1,7 +1,7 @@
 import {React,Component} from "react";
 import { Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
-
+import './Bisection.css';
 
 
 const mainDiv = {
@@ -42,6 +42,7 @@ class Bisection extends Component{
       else{
         L=m; 
       }
+
       do {
         m = (Number(L)+Number(R))/2;
 
@@ -61,16 +62,16 @@ class Bisection extends Component{
         x=m;
         }while(Math.abs(eval(equation)) > 0.000001);
  
-        document.getElementById("Showm").innerHTML=m;
-        document.getElementById("ShowM").innerHTML=m;
+        document.getElementById("Show1").innerHTML=m;
+        document.getElementById("Show2").innerHTML=m;
 
         x=m;
         var Cheak = eval(equation);
         if(Cheak<0.000001){
             Cheak=0;
         }
-        document.getElementById("ShowE").innerHTML=Equation;
-        document.getElementById("ShowC").innerHTML=Cheak;
+        document.getElementById("Show3").innerHTML=Equation;
+        document.getElementById("Show4").innerHTML=Cheak;
        
        
     }
@@ -79,37 +80,39 @@ class Bisection extends Component{
             <div>
                <div style={mainDiv}>
                    <div  style={Div} >
-                        <h1> Bisection Method </h1>
+                    <div class="head1" style={{width:"30%",margin:"0 auto"}}>
+                        <h1> Bisection Method </h1></div>
                         <br></br>
                        
                             
-                            <div>
-                                <Form.Control id="equation" type="text" placeholder="input equation" style={{width:"20%",margin:"0 auto"}}></Form.Control>
+                            <div class="box">
+                                <Form.Control id="equation" type="text" placeholder="input equation" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                                 <br></br>
-                                <Form.Control id="InputL" type="number" placeholder="input L" style={{width:"20%",margin:"0 auto"}}></Form.Control>
+                                <Form.Control id="InputL" type="number" placeholder="input L" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                                 <br></br>
-                                <Form.Control id="InputR" type="number" placeholder="input R" style={{width:"20%",margin:"0 auto"}}></Form.Control>
+                                <Form.Control id="InputR" type="number" placeholder="input R" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                             </div>
                             <br></br>
-                            <Button onClick={this.getValue}  style={{width:"10%",margin:"0 auto"}} >
+                            <div class="button">
+                            <Button onClick={this.getValue}  style={{width:"15%",margin:"0 auto"}} >
                                     done
-                            </Button>
+                            </Button></div>
                     
                             <br></br><br></br><br></br>
-                            <div style={{width:"40%",height:"5%",margin:"0 auto",background:'#F0FFF0'}}>
-                            <h>ans = </h>
-                            <h style={{color:'pink'}} id="Showm">  </h>
+                            <div style={{width:"30%",height:"7%",margin:"0 auto",background:'#F0FFF0'}}>
+                            <h>answer = </h>
+                            <h style={{color:'back'}} id="Show1">  </h>
                         </div>
                         <br></br><br></br><br></br>
-                        <div style={{width:"40%",margin:"0 auto",background:'#FFFFE0',textAlign:"left"}}>
-                            <h4>check answer </h4>
-                            <div style={{width:"40%",margin:"0 auto",textAlign:"left"}}>
+                        <div class="box" style={{width:"30%",margin:"0 auto",background:'#FFFFE0',textAlign:"left"}}>
+                            <h4>answer </h4>
+                            <div class="box" style={{width:"30%",margin:"0 auto",textAlign:"left"}}>
                                 <h>f(x) = </h>
-                                <h id="ShowE"></h><br></br>
+                                <h id="Show3"></h><br></br>
                                 <h>if x = </h>
-                                <h id="ShowM"></h><br></br>
-                                <h>ans = </h>
-                                <h id="ShowC"></h>
+                                <h id="Show2"></h><br></br>
+                                <h>answer = </h>
+                                <h id="Show4"></h>
                             </div>
                         </div>
 

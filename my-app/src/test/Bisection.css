@@ -1,0 +1,17 @@
+.head1{
+    margin-top: 20px;
+    font-size: 16px;
+    background-color:rgb(157, 246, 229);
+    text-align: center;
+
+}
+.box{
+    text-align: center;
+    font-size: large;
+
+}
+.button{
+
+    text-align: center;
+    font-size: 25px;
+}

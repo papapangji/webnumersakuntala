@@ -1,13 +1,14 @@
 import {React,Component} from "react";
 import { Button } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
-import './Newton.css';
+import './Bisection.css';
 
 
 const mainDiv = {
     display:"flex",
     width:"100%",
-    margin:"0 auto"
+    margin:"0 auto",
+    
 }
 
 const Div = {
@@ -28,8 +29,8 @@ class Newton extends Component{
         var Linear_ans;
         var Quadratic_ans;
         var term = 1;
-        var start = document.getElementById("Inputstart").value;
-        var end = document.getElementById("Inputend").value;
+        var start = document.getElementById("Inputxstart").value;
+        var end = document.getElementById("Inputxend").value;
 
         var s = Number(start);
         var e = Number(end);
@@ -95,31 +96,35 @@ class Newton extends Component{
             <div>
                <div style={mainDiv}>
                    <div  style={Div} >
-                        <h1> Newton Interpolation </h1>
+                   <div class="head1" style={{width:"30%",margin:"0 auto"}}>
+                        <h1> Newton Interpolation </h1></div>
                         <br></br>
 
-                            <div>
-                                <Form.Control id="Inputstart" type="number" placeholder="input start" style={{width:"20%",margin:"0 auto"}}></Form.Control>
+                            <div className="box">
+                                <Form.Control id="Inputstart" type="number" placeholder="input xstart" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                                 <br></br>
-                                <Form.Control id="Inputend" type="number" placeholder="input end" style={{width:"20%",margin:"0 auto"}}></Form.Control>
+                                <Form.Control id="Inputend" type="number" placeholder="input xend" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                             </div>
                             <br>
                             </br>
-                            <Button onClick={this.Cal_interpolate}  style={{width:"10%",margin:"0 auto"}} >
-                                    Calculate
-                            </Button>
+
+                            <div class="box">
+                            <Button onClick={this.getValue}  style={{width:"15%",margin:"0 auto"}} >
+                                    done
+                            </Button></div>
+                    
                     
                             <br></br><br></br><br></br>
 
-                            <div style={{width:"40%",height:"22%",margin:"0 auto",background:'#F0FFF0'}}>
+                            <div style={{width:"30%",height:"18%",margin:"0 auto"}}>
                                 <h>Linear = </h>
-                                <h style={{color:'pink'}} id="Linear">  </h>
+                                <h style={{color:'back'}} id="Linear">  </h>
                                 <br/>
                                 <h>Quadratic = </h>
-                                <h style={{color:'pink'}} id="Quadratic">  </h>
+                                <h style={{color:'back'}} id="Quadratic">  </h>
                                 <br/>
                                 <h>Polynomial = </h>
-                                <h style={{color:'pink'}} id="Polynomial">  </h>
+                                <h style={{color:'back'}} id="Polynomial">  </h>
                             </div>
                         
 
