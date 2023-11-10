@@ -15,8 +15,8 @@ const Div = {
 }
 class Secant extends Component{
     cal_Secant(){
-        var x0 = Number(document.getElementById("input_x0").value);
-        var equation = document.getElementById("Equation").value;
+        var x0 = Number(document.getElementById("X0").value);
+        var eq = document.getElementById("eq").value;
         var x1 = 0;
         var checkx;
         var scope;
@@ -25,9 +25,9 @@ class Secant extends Component{
         do{
             checkx = x1;
             scope = {x:x0};
-            var fx0 = evaluate(equation,scope);
+            var fx0 = evaluate(eq,scope);
             scope = {x:x1};
-            var fx1 = evaluate(equation,scope);
+            var fx1 = evaluate(eq,scope);
             x2 = x0-(fx0*(x0-x1))/(fx0-fx1);
             x0 = x1;
             x1 = x2;
@@ -45,9 +45,9 @@ class Secant extends Component{
                         <br/><br/>
 
                         <div class="box">
-                        <Form.Control id="Equation" type="text" placeholder="equation" style={{width:"30%",margin:"0 auto"}}></Form.Control>
+                        <Form.Control id="eq" type="text" placeholder="Equation" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                             <br/>
-                            <Form.Control id="input_x0" type="number" placeholder="x0" style={{width:"30%",margin:"0 auto"}}></Form.Control>    
+                            <Form.Control id="X0" type="number" placeholder="x0" style={{width:"30%",margin:"0 auto"}}></Form.Control>    
                         </div>
                         <br/>
                         <div class="box">

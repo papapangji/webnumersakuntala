@@ -74,8 +74,8 @@ class Lagrange extends Component{
         var xvalue = 42235;
         var Polynomial_L = [];
         var Polynomial_ans = 0;
-        var start = document.getElementById("Polynomialinputstart").value;
-        var end = document.getElementById("Polynomialinputend").value;
+        var start = document.getElementById("start").value;
+        var end = document.getElementById("end").value;
         var s = Number(start);
         var e = Number(end);
 
@@ -162,9 +162,9 @@ class Lagrange extends Component{
                         <br/><br/>
 
                         <div className="box">
-                            <Form.Control id="Polynomialinputstart" type="number" placeholder="start" style={{width:"30%", margin:"0 auto"}}></Form.Control>
+                            <Form.Control id="start" type="number" placeholder="start" style={{width:"30%", margin:"0 auto"}}></Form.Control>
                             <br/>
-                            <Form.Control id="Polynomialinputend" type="number" placeholder="end" style={{width:"30%", margin:"0 auto"}}></Form.Control>
+                            <Form.Control id="end" type="number" placeholder="end" style={{width:"30%", margin:"0 auto"}}></Form.Control>
                             <br/><br/>
                         </div>
                         <div className="box">

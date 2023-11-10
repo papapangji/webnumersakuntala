@@ -17,14 +17,14 @@ class Graphical extends Component{
     cal_Graphical(){
         var x = Number(document.getElementById("inputstart").value);
         var n = Number(document.getElementById("inputend").value);
-        var equation = document.getElementById("equation").value;
+        var eq = document.getElementById("eq").value;
 
         var scope = {x:x};
-        var fx1 = evaluate(equation,scope);
+        var fx1 = evaluate(eq,scope);
 
         for(x +=1;x<=n;x++){
             scope = {x:x};
-            var fx2 = evaluate(equation,scope);
+            var fx2 = evaluate(eq,scope);
             if(fx1*fx2 > 0){
                 fx1 = fx2;
             }
@@ -36,16 +36,16 @@ class Graphical extends Component{
         var a = x-1;
         var b = x;
         scope = {x:a};
-        var fx = evaluate(equation,scope);
+        var fx = evaluate(eq,scope);
         while(fx!==0 && a<=b){
             a += 0.000001;
             scope = {x:a};
-            fx = evaluate(equation,scope);
+            fx = evaluate(eq,scope);
             if(fx >= 0.0){
                 break;
             }
          }
-         document.getElementById("ans").innerHTML=a;
+         document.getElementById("answerwer").innerHTML=a;
     }
     render(){
         return(
@@ -57,7 +57,7 @@ class Graphical extends Component{
                         <br/><br/>
 
                         <div class="box">
-                            <Form.Control id="Equation" type="text" placeholder="equation" style={{width:"30%",margin:"0 auto"}}></Form.Control>
+                            <Form.Control id="eq" type="text" placeholder="Equation" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                             <br/>
                             <Form.Control id="inputstart" type="number" placeholder="start" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                             <br/>
@@ -69,7 +69,7 @@ class Graphical extends Component{
                             <Button onClick={this.getValue}  style={{width:"15%",margin:"0 auto"}} >
                                     done
                             </Button></div>
-                        <h id="ans"></h>
+                        <h id="answerwer"></h>
                     </div>
                 </div>
             </div>

@@ -17,7 +17,7 @@ const Div = {
 class Gauss_elimination extends Component{
 
     create_matrix_input(){
-        var size = document.getElementById("size_of_matrix").value;
+        var size = document.getElementById("sizematrix").value;
         var m_input = "";
 
         for(var i = 0; i<size; i++){
@@ -30,7 +30,7 @@ class Gauss_elimination extends Component{
     }
 
     Cal_Gauss = () =>{
-        var size = document.getElementById("size_of_matrix").value;
+        var size = document.getElementById("sizematrix").value;
         var a = [];
         var b = [];
         var solution = [];
@@ -68,7 +68,7 @@ class Gauss_elimination extends Component{
         }
 
         var printform = () =>{
-            var size = document.getElementById("size_of_matrix").value;
+            var size = document.getElementById("sizematrix").value;
             var table = "<h> Result: <br/><br/> </h><table style='width:20%; margin-left:auto; margin-right: auto'>";
             
             for(var i = 0; i<size; i++){
@@ -113,7 +113,7 @@ class Gauss_elimination extends Component{
                         <h1>Gauss elimination</h1></div>
                         <br/>
                         <div className="box">
-                            <Form.Control id="size_of_matrix" placeholder="matrix size" type="number" step="1" style={{width:"30%", margin:"0 auto"}}></Form.Control>
+                            <Form.Control id="sizematrix" placeholder="matrix size" type="number" step="1" style={{width:"30%", margin:"0 auto"}}></Form.Control>
                         </div>
                         <br/><br/>
                         <div className="box">

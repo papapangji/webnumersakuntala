@@ -17,14 +17,14 @@ const Div = {
 class Onepoint extends Component{
 
     Cal_Onepoint(){
-        var equation = document.getElementById("Equation").value;
-        var x0 = parseFloat(document.getElementById("input_x0").value);
+        var eq = document.getElementById("eq").value;
+        var x0 = parseFloat(document.getElementById("X0").value);
         var x1, xold, scope;
         var e = 0.00001;
         do{
             xold = x0;
             scope = { x:x0 };
-            x1 = evaluate(equation, scope);
+            x1 = evaluate(eq, scope);
             x0 = x1;
 
         }while((Math.abs((x1-xold) / x1) * 100) >= e);
@@ -42,9 +42,9 @@ class Onepoint extends Component{
                         <br/><br/>
 
                         <div class="box">
-                            <Form.Control id="Equation" type="text" placeholder="equation" style={{width:"30%", margin:"0 auto"}}></Form.Control>
+                            <Form.Control id="eq" type="text" placeholder="Equation" style={{width:"30%", margin:"0 auto"}}></Form.Control>
                             <br/>
-                            <Form.Control id="input_x0" type="number" placeholder="X0" style={{width:"30%", margin:"0 auto"}}></Form.Control>
+                            <Form.Control id="X0" type="number" placeholder="X0" style={{width:"30%", margin:"0 auto"}}></Form.Control>
                         </div>
                         <br/>
 

@@ -17,7 +17,7 @@ class Falseposition extends Component{
     getFalseposition(){
         var xr = Number(document.getElementById("inputxr").value);
         var xl = Number(document.getElementById("inputxl").value);
-        var epuation =  document.getElementById("equation").value;
+        var epuation =  document.getElementById("eq").value;
         var xr2 = parseFloat(xr);
         var xl2 = parseFloat(xl);
         var scope;
@@ -53,7 +53,7 @@ class Falseposition extends Component{
                         <br/><br/>
 
                         <div className="box">
-                        <Form.Control id="equation" type="text" placeholder="equation" style={{width:"30%",margin:"0 auto"}}></Form.Control>
+                        <Form.Control id="eq" type="text" placeholder="Equation" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                                 <br/>
                                 <Form.Control id="InputL" type="number" placeholder="XL" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                                 <br></br>

@@ -20,11 +20,11 @@ class Bisection extends Component{
         super();
     }
     getValue(){
-        var equation = document.getElementById("equation").value;
+        var eq = document.getElementById("eq").value;
         var l = document.getElementById("InputL").value;
         var r = document.getElementById("InputR").value;
         
-        var Equation=equation;
+        var eqN=eq;
         var L=l;
         var R=r;
         var x;
@@ -32,9 +32,9 @@ class Bisection extends Component{
         var mOld = m;
 
        x=m;
-       var fXm = eval(equation);
+       var fXm = eval(eq);
        x=R;
-       var fXr = eval(equation);
+       var fXr = eval(eq);
 
        if(Number(fXm)*Number(fXr)>0){
         R=m;
@@ -47,9 +47,9 @@ class Bisection extends Component{
         m = (Number(L)+Number(R))/2;
 
         x=m;
-        var fXm = eval(equation);
+        var fXm = eval(eq);
         x=R;
-        var fXr = eval(equation);
+        var fXr = eval(eq);
         
         if(Number(fXm)*Number(fXr)>0){
           R=m; 
@@ -60,17 +60,17 @@ class Bisection extends Component{
         mOld = m;
 
         x=m;
-        }while(Math.abs(eval(equation)) > 0.000001);
+        }while(Math.abs(eval(eq)) > 0.000001);
  
         document.getElementById("Show1").innerHTML=m;
         document.getElementById("Show2").innerHTML=m;
 
         x=m;
-        var Cheak = eval(equation);
+        var Cheak = eval(eq);
         if(Cheak<0.000001){
             Cheak=0;
         }
-        document.getElementById("Show3").innerHTML=Equation;
+        document.getElementById("Show3").innerHTML=eqN;
         document.getElementById("Show4").innerHTML=Cheak;
        
        
@@ -86,11 +86,11 @@ class Bisection extends Component{
                        
                             
                             <div class="box">
-                                <Form.Control id="equation" type="text" placeholder="equation" style={{width:"30%",margin:"0 auto"}}></Form.Control>
+                                <Form.Control id="eq" type="text" placeholder="Equation" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                                 <br></br>
-                                <Form.Control id="InputL" type="number" placeholder="XL" style={{width:"30%",margin:"0 auto"}}></Form.Control>
+                                <Form.Control id="XL" type="number" placeholder="XL" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                                 <br></br>
-                                <Form.Control id="InputR" type="number" placeholder="XR" style={{width:"30%",margin:"0 auto"}}></Form.Control>
+                                <Form.Control id="XR" type="number" placeholder="XR" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                             </div>
                             <br></br>
                             <div class="button">
