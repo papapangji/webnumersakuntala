@@ -101,9 +101,9 @@ class Newton extends Component{
                         <br></br>
 
                             <div className="box">
-                                <Form.Control id="Inputstart" type="number" placeholder="input xstart" style={{width:"30%",margin:"0 auto"}}></Form.Control>
+                                <Form.Control id="Inputstart" type="number" placeholder="start" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                                 <br></br>
-                                <Form.Control id="Inputend" type="number" placeholder="input xend" style={{width:"30%",margin:"0 auto"}}></Form.Control>
+                                <Form.Control id="Inputend" type="number" placeholder="end" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                             </div>
                             <br>
                             </br>

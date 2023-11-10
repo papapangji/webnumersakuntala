@@ -45,9 +45,9 @@ class Secant extends Component{
                         <br/><br/>
 
                         <div class="box">
-                        <Form.Control id="Equation" type="text" placeholder="enter equation" style={{width:"30%",margin:"0 auto"}}></Form.Control>
+                        <Form.Control id="Equation" type="text" placeholder="equation" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                             <br/>
-                            <Form.Control id="input_x0" type="number" placeholder="enter x0" style={{width:"30%",margin:"0 auto"}}></Form.Control>    
+                            <Form.Control id="input_x0" type="number" placeholder="x0" style={{width:"30%",margin:"0 auto"}}></Form.Control>    
                         </div>
                         <br/>
                         <div class="box">

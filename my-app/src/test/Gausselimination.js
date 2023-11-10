@@ -113,7 +113,7 @@ class Gauss_elimination extends Component{
                         <h1>Gauss elimination</h1></div>
                         <br/>
                         <div className="box">
-                            <Form.Control id="size_of_matrix" placeholder="input matrix size" type="number" step="1" style={{width:"30%", margin:"0 auto"}}></Form.Control>
+                            <Form.Control id="size_of_matrix" placeholder="matrix size" type="number" step="1" style={{width:"30%", margin:"0 auto"}}></Form.Control>
                         </div>
                         <br/><br/>
                         <div className="box">

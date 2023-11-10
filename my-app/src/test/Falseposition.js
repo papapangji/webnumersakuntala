@@ -53,11 +53,11 @@ class Falseposition extends Component{
                         <br/><br/>
 
                         <div className="box">
-                        <Form.Control id="equation" type="text" placeholder="input equation" style={{width:"30%",margin:"0 auto"}}></Form.Control>
+                        <Form.Control id="equation" type="text" placeholder="equation" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                                 <br/>
-                                <Form.Control id="InputL" type="number" placeholder="input L" style={{width:"30%",margin:"0 auto"}}></Form.Control>
+                                <Form.Control id="InputL" type="number" placeholder="XL" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                                 <br></br>
-                                <Form.Control id="InputR" type="number" placeholder="input R" style={{width:"30%",margin:"0 auto"}}></Form.Control>      
+                                <Form.Control id="InputR" type="number" placeholder="XR" style={{width:"30%",margin:"0 auto"}}></Form.Control>      
                         </div>
                         <br/>
                         <div className="box">

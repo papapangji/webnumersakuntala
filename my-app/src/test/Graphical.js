@@ -57,11 +57,11 @@ class Graphical extends Component{
                         <br/><br/>
 
                         <div class="box">
-                            <Form.Control id="Equation" type="text" placeholder="input equation" style={{width:"30%",margin:"0 auto"}}></Form.Control>
+                            <Form.Control id="Equation" type="text" placeholder="equation" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                             <br/>
-                            <Form.Control id="inputstart" type="number" placeholder="input start" style={{width:"30%",margin:"0 auto"}}></Form.Control>
+                            <Form.Control id="inputstart" type="number" placeholder="start" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                             <br/>
-                            <Form.Control id="inputend" type="number" placeholder="input end" style={{width:"30%",margin:"0 auto"}}></Form.Control>
+                            <Form.Control id="inputend" type="number" placeholder="end" style={{width:"30%",margin:"0 auto"}}></Form.Control>
                         </div>
                         <br/>
 
